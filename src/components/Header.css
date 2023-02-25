@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.Header{
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Header__left{
+    margin-top: 5px;
+    width: 15%;
+    background-color: rgb(251, 236, 225);
+    border-radius: 50px;
+    box-shadow: 0 25px 20px -20px rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    color: #777;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+nav{
+    margin-top: 5px;
+    width: 40%;
+    background-color: rgb(251, 236, 225);
+    border-radius: 50px;
+    padding:10px;
+    box-shadow: 0 25px 20px -20px rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+}
+
+.Header__right{
+    margin-top: 5px;
+    width: 15%;
+    background-color: rgb(251, 236, 225);
+    border-radius: 50px;
+    box-shadow: 0 25px 20px -20px rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li,p{
+    display: inline-flex;
+    padding: 13px 40px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #777;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.5s;
+}
+
+nav ul li::after{
+    content: '';
+    background: #f44566;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    opacity: 0;
+    transition: top 0.5s;
+}
+
+.Header__left p::after{
+    content: '';
+    background: #f44566;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    opacity: 0;
+    transition: top 0.5s;
+}
+
+.Header__right p::after{
+    content: '';
+    background: #f44566;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    opacity: 0;
+    transition: top 0.5s;
+}
+
+.Header__left p:hover{
+    color:white;
+}
+
+.Header__right p:hover{
+    color:white;
+}
+
+nav ul li:hover{
+    color: white;
+}
+
+nav ul li:hover::after{
+    top: 50%;
+    opacity: 1;
+}
+
+
+.Header__left p:hover::after{
+    top: 50%;
+    opacity: 1;
+}
+
+.Header__right p:hover::after{
+    top: 50%;
+    opacity: 1;
+}
